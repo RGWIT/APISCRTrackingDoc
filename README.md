@@ -16,7 +16,7 @@ Requirements:
 Set up the work environment:
 
  - Step 1: Install CURL or [POSTMAN](https://www.getpostman.com/) in your computer.
- - Step 2: Get your merchant Keys and Exporter ID
+ - Step 2: Get your merchant Keys.
  - Step 3: Launch your first query.
 
 Methods
@@ -39,10 +39,11 @@ Method **insert**
 |model|YES  |string|Model|30
 |model_type|YES|string|can be CAR,VAN,TRUCK,PARTS|10
 |year|YES|integer|must be 4 digit length|4
-|exporter_id|YES|integer|The merchant unique identifier|4
 |price|YES|integer|Between 0-999999999|11
 |fuel|YES|string|Can be: DIESEL,PETROL,HYBRID,LGP,ELECTRIC|12
 |kms|YES|integer|0-99999999|12
 
+Example/Sample:
 
+    https://socartest.rgwit.be/api/?key=facd4eek-f747-443e-99e0-d8fbc10fb1dd&a=insert&maker=MITSUBISHI&model=PAJERO 3.2 DID AUT FINAL EDITION N456BE&model_type=CAR&year=2019&price=34500&gear=MANUAL&fuel=DIESEL&kms=3
 
