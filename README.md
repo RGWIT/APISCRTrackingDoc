@@ -83,3 +83,12 @@ Method **delete**
 Example/Sample:
 
     https://socartest.rgwit.be/api/?key=MERCHANT_KEY&a=delete&id=39
+
+
+Currently the API Sandbox address is
+
+https://socartest.rgwit.be/api/
+
+Currently the API operational address is:
+
+https://mobileapp.socar.be/api/
