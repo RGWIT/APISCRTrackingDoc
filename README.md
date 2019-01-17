@@ -24,7 +24,6 @@ Methods
 |Method|Description  |
 |--|--|
 |insert|Create a new vehicle record in our database  |
-|update|Update an existing vehicle in our database  |
 |delete|Delete an existing vehicle in our database (this action can't be undone) |
 |addphoto|Add a new photo from an existing URL  |
 
@@ -70,3 +69,17 @@ jSON Answer:
 
     {"ans":320,"data":[],"data2":[],"data3":[]}
 If the ans value is greater than zero then your photo has been download it to our servers and the vehicle is already visible in Socar Tracking app.
+
+The first photo that you send, it will be the flag or landing photo of the vehicle.
+
+Method **delete**
+
+|Parameter|Mandatory  |Type | Description|Max length
+|--|--|--|--|--|
+|key|YES  |string|Merchant API Key|128
+|a|YES  |string|Action in this case : delete|12
+|id|YES  |integer|Vehicle unique ID|11
+
+Example/Sample:
+
+    https://socartest.rgwit.be/api/?key=MERCHANT_KEY&a=delete&id=39
