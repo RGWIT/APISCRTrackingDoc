@@ -1,6 +1,3 @@
-# apiscrtrackingdoc
-API Documentation.
-
 **Welcome to Socar Tracking API for Vehicle market module.**
 
 First things first, be sure you have 2 API Keys, one for testing and one for operations.
@@ -8,7 +5,7 @@ Those keys are provided via our support please contact marvin.ai@rgwit.be
 
 We strongly suggest to use programs like CURL or [POSTMAN](https://www.getpostman.com/) to test the API.
 
-**Important:** *Each merchant has its own pair of keys.*
+**Important:** *Each merchant has its own pair of keys, and a unique identifier*
 
 Requirements: 
 
@@ -19,5 +16,33 @@ Requirements:
 Set up the work environment:
 
  - Step 1: Install CURL or [POSTMAN](https://www.getpostman.com/) in your computer.
- - Step 2: Get your merchant Keys
+ - Step 2: Get your merchant Keys and Exporter ID
  - Step 3: Launch your first query.
+
+Methods
+
+|Method|Description  |
+|--|--|
+|insert|Create a new vehicle record in our database  |
+|update|Update an existing vehicle in our database  |
+|delete|Delete an existing vehicle in our database (this action can't be undone) |
+|addphoto|Add a new photo from an existing URL  |
+
+Method **insert**
+
+    
+|Parameter|Mandatory  |Type | Description|Max length
+|--|--|--|--|--|
+|key|YES  |string|Merchant API Key|128
+|a|YES  |string|Action in this case : insert|12
+|maker|YES  |string|Vehicle maker, no special characters|30
+|model|YES  |string|Model|30
+|model_type|YES|string|can be CAR,VAN,TRUCK,PARTS|10
+|year|YES|integer|must be 4 digit length|4
+|exporter_id|YES|integer|The merchant unique identifier|4
+|price|YES|integer|Between 0-999999999|11
+|fuel|YES|string|Can be: DIESEL,PETROL,HYBRID,LGP,ELECTRIC|12
+|kms|YES|integer|0-99999999|12
+
+
+
